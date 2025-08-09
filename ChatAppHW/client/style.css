@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient( 69.2deg,  rgba(77,143,251,1) 35.3%, rgba(202,51,255,1) 100.3% );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container, .chat-container {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 600px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-container h2 {
+  margin-bottom: 15px;
+}
+
+.login-container input {
+  width: 96.5%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+.login-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.login-container button {
+  padding: 10px;
+  width: 100%;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+.chat-container header {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.side-panel {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  gap: 15px;
+}
+
+.side-panel > div {
+  flex: 1;
+  background: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
+  height: 130px;
+  overflow-y: auto;
+}
+
+.side-panel h3 {
+  margin-top: 0;
+}
+
+#users-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#users-list li {
+  padding: 4px 6px;
+  border-bottom: 1px solid #ccc;
+}
+
+#messages {
+  list-style: none;
+  padding: 10px;
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+}
+
+#messages li {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+#messages li.system {
+  background: #d1ecf1;
+  color: #0c5460;
+  font-style: italic;
+}
+
+#messages li.private {
+  background: #ffeeba;
+  font-weight: bold;
+}
+
+#messages li.self {
+  background: #c3e6cb;
+}
+
+form {
+  display: flex;
+  margin-top: 10px;
+}
+
+form input {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px 0 0 5px;
+}
+
+form button {
+  border: none;
+  background: #007bff;
+  color: white;
+  padding: 0 20px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+form input:focus, form button:focus {
+  outline: none;
+}

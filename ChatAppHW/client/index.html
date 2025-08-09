@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Advanced Chat App</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="login-container" id="login-container">
+  <h2>Enter your username to join</h2>
+  <input type="text" id="username-input" placeholder="Username" />
+  <select id="room-select">
+    <option value="General">General</option>
+    <option value="Sports">Sports</option>
+    <option value="Tech">Tech</option>
+    <option value="Music">Music</option>
+  </select>
+  <button id="join-btn">Join Chat</button>
+</div>
+
+<div class="chat-container" id="chat-container" style="display:none;">
+  <header>
+    Real-Time Chat - Room: <span id="current-room">General</span>
+  </header>
+
+  <div class="side-panel">
+    <div>
+      <h3>Users in room</h3>
+      <ul id="users-list"></ul>
+    </div>
+    <div>
+      <h3>Switch Room</h3>
+      <select id="room-switch-select">
+        <option value="General">General</option>
+        <option value="Sports">Sports</option>
+        <option value="Tech">Tech</option>
+        <option value="Music">Music</option>
+      </select>
+      <button id="switch-room-btn">Switch</button>
+    </div>
+    <div>
+      <h3>Send To</h3>
+      <select id="private-select">
+        <option value="All">All (Room)</option>
+      </select>
+    </div>
+  </div>
+
+  <ul id="messages"></ul>
+
+  <form id="form" autocomplete="off">
+    <input id="input" placeholder="Type a message..." autocomplete="off" />
+    <button>Send</button>
+  </form>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
